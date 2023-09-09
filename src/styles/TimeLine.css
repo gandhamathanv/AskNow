@@ -1,0 +1,80 @@
+@import url("../common/styles.css");
+
+.timeline-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-steps {
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.timeline-step {
+  display: flex;
+  position: relative;
+}
+.timeline-step:after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  height: 0;
+  width: 2px;
+  background-color: #007EA7;
+}
+.timeline-step .timeline-info {
+  margin: 0px 0 20px;
+}
+.timeline-step .timeline-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0;
+  color: white;
+}
+.timeline-step .timeline-date {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: white;
+}
+.timeline-step .timeline-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 0;
+  margin: 0;
+}
+.timeline-step:not(:last-child):after {
+  height: 95%;
+}
+
+.timeline-number {
+  width: 4rem;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 10%;
+  border: 2px solid #007EA7;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 14px;
+  background-color: var(--bg-color);
+}
+.timeline-number.timeline-completed {
+  background-color: #007EA7;
+}
+.timeline-number svg {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.timeline-number svg path {
+  fill: white;
+}

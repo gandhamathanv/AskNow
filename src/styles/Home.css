@@ -1,0 +1,73 @@
+.header-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+.header-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-size: 10rem;
+   
+  }
+  
+  .page-content{
+    padding: 30px 10%;
+  }
+
+  .header-description {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 100%;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-size: 48px;
+    color: white;
+    border-right: 2px solid #fff;
+    padding-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(25, end), blink-caret 0.75s step-end infinite;
+  }
+
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  
+  /* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .header-container {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    
+    
+    .header-title {
+        font-size: 5rem;
+        
+    }
+    
+    .page-content{
+        padding: 10px 10%;
+    }
+    
+    .header-description {
+        
+        font-size: 2rem;
+      }
+  }

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("./common/styles.css");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
