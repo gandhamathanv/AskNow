@@ -36,7 +36,7 @@ class Background extends React.Component {
         delay: (el, i) => 1000 * i,
         opacity: [
           {
-            duration: 1000,
+            duration: 500,
             value: "4"
           }
         ],
