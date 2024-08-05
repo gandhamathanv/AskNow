@@ -4,6 +4,7 @@ function Typewriter() {
   const [text, setText] = useState('');
   const [fullTexts] = useState([
     'FrontEnd Development',
+    'Data Science',
     'BackEnd Development',
     'Database management',
     'API Handling',
