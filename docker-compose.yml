@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  asknow-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asknow-react-app
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - asknow-network
+
+  # Development service (optional)
+  asknow-dev:
+    image: node:18-alpine
+    container_name: asknow-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3001:3000"
+    command: sh -c "npm install && npm start"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
+    networks:
+      - asknow-network
+    profiles:
+      - dev
+
+networks:
+  asknow-network:
+    driver: bridge
